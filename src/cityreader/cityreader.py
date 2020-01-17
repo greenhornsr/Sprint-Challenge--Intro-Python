@@ -31,11 +31,7 @@ def cityreader(cities=[]):
     #Skip first line
     next(reader)
     for row in reader:
-      # cityname = f"{row[0], row[1]}"
-      # citylat = row[3]
-      # citylon = row[4]
-      cities.append(City(row[0], row[3], row[4]))
-      print(row[0], row[1], row[2], row[3], row[4])
+      cities.append(City(row[0], float(row[3]), float(row[4])))
 
   # For each city record, create a new City instance and add it to the 
   # `cities` list
